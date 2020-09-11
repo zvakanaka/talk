@@ -1,7 +1,15 @@
-const appURL = () => {
-	const protocol = 'http' + (location.hostname == 'localhost' ? '' : 's') + '://';
-	return protocol + location.hostname + (location.hostname == 'localhost' ? ':3000' : '');
-};
+function getAppPath() {
+  const pathname = window.location.pathname
+  const matchArr = pathname.match(/(^.*)(\/.*$)/)
+  if (matchArr) {
+    const [, path, suffix] = matchArr
+    if (!suffix.includes('.') || suffix === '/') return pathname
+    return path
+  }
+  return pathname
+}
+const appURL = () => getAppPath().match(/(?<upToSlash>.*)\/$/)[1]
+
 const getRoomName = () => {
 	let roomName = location.pathname.substring(1);
 	if (roomName == '') {
@@ -49,8 +57,7 @@ var peerMediaElements = {}; /* keep track of our <video> tags, indexed by peer_i
 
 function init() {
 	console.log('Connecting to signaling server');
-	signalingSocket = io(SIGNALING_SERVER);
-	signalingSocket = io();
+  signalingSocket = io('/', {path: appURL() + '/socket.io'})
 
 	signalingSocket.on('connect', function() {
 		console.log('Connected to signaling server');
