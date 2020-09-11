@@ -30,7 +30,6 @@ var ICE_SERVERS = [
 	{ urls: 'stun:stun.sipnet.net:3478' },
 	{ urls: 'stun:stun.ideasip.com:3478' },
 	{ urls: 'stun:stun.iptel.org:3478' },
-	{ urls: 'turn:numb.viagenie.ca', username: 'imvasanthv@gmail.com', credential: 'd0ntuseme' },
 	{
 		urls: [
 			'turn:173.194.72.127:19305?transport=udp',

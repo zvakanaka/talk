@@ -1,5 +1,7 @@
 # Talk
 
+This is a fork of https://github.com/vasanthv/talk.
+
 ## A free group video call app with screen sharing.
 It is built using WebRTC, so all your video chat is peer-to-peer. Group video call is achieved using WebRTC mesh. So the quality of the call is inversely proportional to the number of people on the call. The sweet number is somewhere around 6 to 8 people in an average high-speed connection.
 
@@ -13,7 +15,7 @@ It is built using WebRTC, so all your video chat is peer-to-peer. Group video ca
 Clone the repo locally, or extract the contents of the source code.
 
 ```
-git clone https://github.com/vasanthv/talk.git
+git clone https://github.com/zvakanaka/talk.git
 ```
 
 `cd talk` and then install dependencies

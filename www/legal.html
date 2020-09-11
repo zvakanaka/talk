@@ -15,17 +15,6 @@
 		<link rel="icon" href="favicon.png" type="image/png" />
 		<link rel="stylesheet" href="style.css" />
 		<title>Talk - A free video call app for the web</title>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-19124340-30"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-19124340-30');
-		</script>
 		<style>
 			#wrapper {
 				width: 100%;
@@ -62,7 +51,8 @@
 					<span id="title">Talk</span>
 				</div>
 			</header>
-			<h3>Legal</h3>
+      <h3>Legal</h3>
+      <p>This instance of talk was forked from <a target="_blank" href="https://github.com/vasanthv/talk">https://github.com/vasanthv/talk</a></p>
 			<p>This service is provided under an "as is" condition. It might change or will be discontinued without prior notice. The maker of this service can't be held liable in any way for any reason. </p>
 			<h3>Privacy policy</h3>
 			<p>
@@ -82,11 +72,10 @@
 				RTCSessionDescription is not stored in any persistent database, it's removed from the server
 				as soon as the user unjoins the call by closing the browser window.
 			</p>
-			<p>Talk is purely peer-to-peer, which means the user's video & audio is not sent to our server at all. We use Google Analytics to track
-				aggregated usage statistics in order to improve our service.</p>
+			<p>Talk is purely peer-to-peer, which means the user's video & audio is not sent to our server at all.</p>
 			</p>
 			<p>
-				The maker of Talk has no intention of using personally or selling any of the
+				The maker of Talk, as well as the forker have no intention of using personally or selling any of the
 				above-mentioned data.
 			</p>
 		</div>
